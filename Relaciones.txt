@@ -1,4 +1,4 @@
-SELECT `categorias`.`id_Categorias`,
+SELECT `categorias`.`id_Categorias`,jhgjkgj
     `categorias`.`Nombree`,
     `categorias`.`Posteo`
 FROM `prisma`.`categorias`;
