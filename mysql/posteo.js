@@ -2,18 +2,22 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Posteo
-   = sequelize.define("Posteo", {
-    id: {
+   = sequelize.define("posteo", {
+    id_posteo: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
+
     },
-    contenido:{
-        type : DataTypes.STRING
-    },
+
     titulo:{
         type : DataTypes.STRING
     },
+
+    contenido:{
+        type : DataTypes.STRING
+    },
+
      creador:{
        type : DataTypes.STRING
     },
@@ -21,14 +25,19 @@ module.exports = function(sequelize, DataTypes) {
         type : DataTypes.STRING
     },
     id_usuario:{
-      type : DataTypes.INT
+      type : DataTypes.INTEGER
    },
    id_categoria:{
-     type : DataTypes.INT
+     type : DataTypes.INTEGER
   },
-  categoria:{
-    type : DataTypes.STRING
+ createdAt:{
+   type : DataTypes.DATE,
+   field: "created_at"
  },
+ updatedAt : {
+   type : DataTypes.DATE,
+   field: "updated_at"
+ }
 
 
   }, { freezeTableName: true,

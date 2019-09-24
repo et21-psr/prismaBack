@@ -8,7 +8,6 @@ module.exports = {
                        "password": "",
                        "dialect": "mysql",
                        //"logging":  true
-                     },
-
+                     }
                    }
 			   }

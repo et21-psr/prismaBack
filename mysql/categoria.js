@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Categoria = sequelize.define("Categoria", {
-    id: {
+  var categoria = sequelize.define("categoria", {
+    id_categoria: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
@@ -10,11 +10,13 @@ module.exports = function(sequelize, DataTypes) {
     nombre:{
         type : DataTypes.STRING
     },
-    id_categoria_padre:{
-        type : DataTypes.INT
+    createdAt:{
+      type : DataTypes.DATE,
+      field: "created_at"
     },
-    contenido:{
-       type : DataTypes.STRING
+    updatedAt : {
+      type : DataTypes.DATE,
+      field: "updated_at"
     }
   }, { freezeTableName: true,
   tableName: 'categoria'});
@@ -22,5 +24,5 @@ module.exports = function(sequelize, DataTypes) {
 
 
 //Tarjeta.removeAttribute('id');
-  return Categoria;
+  return categoria;
 };

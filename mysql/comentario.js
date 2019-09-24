@@ -1,26 +1,35 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Comentario = sequelize.define("Comentario", {
-    id: {
+  var Comentario = sequelize.define("comentario", {
+    id_comentario:{
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
     },
-    usuario:{
-        type : DataTypes.STRING
+
+contenido:{
+       type : DataTypes.STRING
     },
-    fecha:{
+id_usuario:{
+        type : DataTypes.INTEGER
+    },
+id_posteo:{
+        type : DataTypes.INTEGER
+    },
+fecha:{
         type : DataTypes.DATE
     },
-    id_usuario:{
-       type : DataTypes.INT
+id_comentariopadre:{
+            type : DataTypes.INTEGER
+        },
+createdAt:{
+      type : DataTypes.DATE,
+      field: "created_at"
     },
-    id_posteo:{
-        type : DataTypes.INT
-    },
-    contenido:{
-       type : DataTypes.STRING
+updatedAt : {
+      type : DataTypes.DATE,
+      field: "updated_at"
     }
   }, { freezeTableName: true,
   tableName: 'comentario'});

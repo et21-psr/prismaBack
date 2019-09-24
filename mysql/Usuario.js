@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Usuarios = sequelize.define("Usuario", {
-    id: {
+  var Usuario = sequelize.define("usuario", {
+    id_usuario: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
@@ -11,21 +11,21 @@ module.exports = function(sequelize, DataTypes) {
     nombre:{
         type : DataTypes.STRING
     },
-    id_comentario:{
-       type : DataTypes.INT
-    },
     email:{
        type : DataTypes.STRING
     },
-    posteo:{
-        type : DataTypes.STRING
+    clave_admin:{
+      type : DataTypes.STRING
     },
-    comentario:{
-        type : DataTypes.STRING
+    createdAt:{
+      type : DataTypes.DATE,
+      field: "created_at"
     },
-    id_posteo:{
-        type : DataTypes.INT
+    updatedAt : {
+      type : DataTypes.DATE,
+      field: "updated_at"
     }
+
   }, { freezeTableName: true,
   tableName: 'usuario'});
 
