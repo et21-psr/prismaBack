@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, comic sans, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.input {
+  position: absolute; left: 100px; top: 7px; height: 27px;
+}
+
+.eliminar{
+  position: absolute; left: 500px; top: 50;
+}

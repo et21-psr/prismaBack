@@ -1,0 +1,55 @@
+INSERT INTO `prisma`.`categorias`
+(`idCategorias`,
+`Nombree`,
+`Posteo`)
+
+VALUES
+(<{idCategorias: }>,
+<{Nombree: }>,
+<{Posteo: }>);
+
+INSERT INTO `prisma`.`comentarios`
+(`idComentarios`,
+`Usuarios`,
+`Contenido`,
+`Comentarios`,
+`Fecha`,
+`ComentarioPadre`,
+`Posteo`)
+
+VALUES
+(<{idComentarios: }>,
+<{Usuarios: }>,
+<{Contenido: }>,
+<{Comentarios: }>,
+<{Fecha: }>,
+<{ComentarioPadre: }>,
+<{Posteo: }>);
+
+INSERT INTO `prisma`.`posteos`
+(`idPosteos`,
+`Texto`,
+`Contenido`,
+`Creador`,
+`imagen`,
+`Categoria`)
+
+VALUES
+(<{idPosteos: }>,
+<{Texto: }>,
+<{Contenido: }>,
+<{Creador: }>,
+<{imagen: }>,
+<{Categoria: }>);
+
+INSERT INTO `prisma`.`usuarios`
+(`idUsuarios`,
+`Posteo`,
+`IdComentarios`,
+`ClaveAdmin`)
+
+VALUES
+(<{idUsuarios: }>,
+<{Posteo: }>,
+<{IdComentarios: }>,
+<{ClaveAdmin: }>);
