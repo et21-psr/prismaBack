@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
+var Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 var models = require("./../mysql");
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -47,7 +48,20 @@ router.post('/', function(req, res, next) {
 
 });
 
-
+//mostrar registro
+router.get('/titulo/:titulo', function(req, res, next) {
+  let titulo = req.params.titulo;
+ models.posteo.findAll({
+   where: {
+     titulo: { [Op.substring]: titulo}
+     }
+   }).then(posteo => {
+     if(posteo == null){
+         res.status(200).jsonp({respuesta: "No existe"});
+     }
+     res.status(200).jsonp(posteo);
+   })
+})
 
 
 
